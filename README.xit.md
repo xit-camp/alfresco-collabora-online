@@ -20,6 +20,6 @@
         environment:
           extra_params: '--o:ssl.enable=false --o:ssl.termination=true'
           dictionaries: 'en_GB en_US sk'
-          server_name: 'lool.dev.notar.sk'
-          domain: 'wopi.dev.notar.sk'
+          server_name: 'lool.dev.***.sk'
+          domain: 'wopi.dev.***.sk'
     ```
