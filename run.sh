@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 export COMPOSE_FILE="${PWD}/target/classes/docker-compose.yml"
 
@@ -48,6 +48,10 @@ start() {
     docker-compose up --build -d
 }
 
+build_image() {
+    docker-compose build
+}
+
 tail() {
     docker-compose logs -f
 }
@@ -56,15 +60,16 @@ tail_all() {
     docker-compose logs --tail="all"
 }
 
-
-
 build_resources
-source "${PWD}/target/classes/run.sh"
-
+source target/classes/run.sh
 
 case "$1" in
   build)
     build
+    ;;
+  build_image)
+    build
+    build_image
     ;;
   build_start)
     down
@@ -105,6 +110,9 @@ case "$1" in
     build_share
     start_share
     tail
+    ;;
+  build_acs)
+    build_acs
     ;;
   reload_acs)
     build_acs

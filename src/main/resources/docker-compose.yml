@@ -2,7 +2,7 @@
 version: '3.4'
 services:
   ${acs.host}:
-    image: collabora-platform-extension:development
+    image: docker.xit.camp/nksr/alfresco-content-repository-community:${alfresco.platform.version}
     build:
       dockerfile: ./Dockerfile
       context: ../../collabora-platform-extension-docker/target
@@ -112,6 +112,7 @@ services:
     privileged: true
     environment:
       extra_params: '--o:ssl.enable=false --o:server_name=${public.host}:9980'
+      dictionaries: 'en_GB en_US sk'
     ports:
     - "${code.port}:9980"
     networks:

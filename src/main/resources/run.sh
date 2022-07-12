@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 
@@ -21,6 +21,7 @@ build_acs() {
     docker-compose kill ${acs.host}
     yes | docker-compose rm -f ${acs.host}
     $MVN_EXEC clean package -pl collabora-platform-extension,collabora-platform-extension-docker
+    docker-compose build
 }
 
 prepare_test() {

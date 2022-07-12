@@ -17,5 +17,6 @@ COPY alfresco-global.properties $TOMCAT_DIR/shared/classes/alfresco-global.prope
 COPY dev-log4j.properties $TOMCAT_DIR/shared/classes/alfresco/extension
 COPY disable-webscript-caching-context.xml $TOMCAT_DIR/shared/classes/alfresco/extension
 
+RUN rm -rf $TOMCAT_DIR/webapps/alfresco/WEB-INF/lib/alfresco-trashcan*.jar
 
 USER ${USERNAME}
