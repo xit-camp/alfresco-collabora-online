@@ -28,7 +28,7 @@
     <!-- Alfresco Platform Config -->
     <acs.host>alfresco-collabora-online-acs</acs.host>
     <docker.acs.image>docker.io/alfresco/alfresco-content-repository-community</docker.acs.image>
-    <alfresco.platform.version>7.2.0.1</alfresco.platform.version>
+    <alfresco.platform.version>7.2.1</alfresco.platform.version>
     <alfresco.platform.docker.user>alfresco</alfresco.platform.docker.user>
     <acs.host>alfresco-collabora-online-acs</acs.host>
     <acs.port>8081</acs.port>
